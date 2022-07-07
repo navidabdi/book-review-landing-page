@@ -9,6 +9,8 @@
   --primary-color-bg: #f9f8f4;
   --secondary-color: #b4d51e;
   --secondary-color-2: #463c74;
+  --title-color: var(--secondary-color-2);
+  --text-color: #463c7480;
   /*========== Font and typography ==========*/
   --body-font: 'Merriweather', sans-serif;
   --biggest-font-size: 2rem;
@@ -24,6 +26,15 @@
   --font-semi-bold: 600;
   --font-black: 900;
 
+  /*========== Margenes ==========*/
+  --m-0-25: 0.25rem;
+  --m-0-5: 0.5rem;
+  --m-0-75: 0.75rem;
+  --m-1: 1rem;
+  --m-1-5: 1.5rem;
+  --m-2: 2rem;
+  --m-2-5: 2.5rem;
+
   /*========== Box Shadow and Border ==========*/
   --shadow-1: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
   --border-1: 1px solid rgba(0, 0, 0, 0.08);
@@ -32,7 +43,7 @@
 /* Responsive typography */
 @media screen and (min-width: 992px) {
   :root {
-    --biggest-font-size: 4rem;
+    --biggest-font-size: 2.5rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -51,6 +62,13 @@
 
 html {
   scroll-behavior: smooth;
+}
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background: var(--body-color);
+  color: var(--text-color);
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -84,24 +102,9 @@ button {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.section {
-  padding: 4.5rem 0 2rem;
-}
 
 /*=============== LAYOUT ===============*/
-.container {
-  max-width: 968px;
-  margin-left: var(--mb-1-5);
-  margin-right: var(--mb-1-5);
-}
 
-.grid {
-  display: grid;
-}
-
-.main {
-  overflow: hidden; /*For animation*/
-}
 /*=============== HEADER ===============*/
 
 /*=============== NAV ===============*/
@@ -110,9 +113,7 @@ button {
 
 /*=============== Popular Books ===============*/
 
-/*=============== Latest Books ===============*/
-
-/*=============== Email Section ===============*/
+/*=============== Recommended books ===============*/
 
 /*=============== Testimonies ===============*/
 
